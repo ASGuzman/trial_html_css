@@ -1,9 +1,9 @@
 function temperature(){
     //To convert celcius to farenheit
     //(CEL * 9/5) + 32
-    var c = document.getElementById("celsius").value;
+    var c = document.getElementById("c").value;
     var f = (c * 9/5) + 32
-    document.getElementById("fahrenheit").value = f
+    document.getElementById("f").value = f
 }
 
 function weight(){
