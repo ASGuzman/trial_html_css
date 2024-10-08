@@ -1,6 +1,9 @@
-body{
+body {
     margin: 10px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #home {
@@ -11,13 +14,14 @@ body{
     margin-top: -1cm;
     padding-top: 2cm;
     padding-bottom: 2cm;
+    width: 100%;
 }
 
-header{
+header {
     font-size: 30px;
     color: rgb(240, 234, 245);
-    float: left;
-    padding-left: 2cm;
+    text-align: center;
+    width: 100%;
 }
 
 /*Navigation bar container */
@@ -46,15 +50,47 @@ header{
     text-decoration: underline;
 }
 
-#all-conversion-sections{
-    display: grid;
-    justify-content: center;
+#all-conversion-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Cada calculadora estará dentro de un recuadro */
+.b {
+    border-top-style: solid;
+    background-color: white;
+    border-top-width: 20px;
+    width: 600px;
+    height: auto; /* Ajuste automático de altura */
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Estilos de las diferentes secciones de calculadora */
+.temperature {
+    border-top-color: green;
+}
+
+.weight {
+    border-top-color: coral;
+}
+
+.distance {
+    border-top-color: cyan;
+}
+
+/* Figura centrada dentro de cada recuadro */
 figure {
-    float: left;
-    justify-self: auto;
-    width: 200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 img {
@@ -65,51 +101,35 @@ figcaption {
     color: black;
     font-size: 17px;
     text-align: center;
+    margin-top: 10px;
 }
 
-button{
+/* Centrar el contenido dentro de cada calculadora */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que el artículo ocupe todo el ancho */
+}
+
+fieldset {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
     font-size: 20px;
     border: transparent;
     border-radius: 40px;
-    width: fit-content;
     background-color: rgb(173, 218, 173);
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 15px; /* Añadir espacio superior para el botón */
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
-}
-
-/* The calculator panel */
-
-.b{
-    border-top-style: solid;
-    background-color: white;
-    border-top-width: 20px;
-    width: 600px;
-    height: 400px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    display: flex;
-}
-
-.temperature{
-    border-top-color: green;
-}
-
-.weight{
-    border-top-color: coral;
-}
-
-.distance{
-    border-top-color: cyan;
-}
-
-legend{
-    font-size: 30px;
-    font-weight: bolder;
 }
 
 /* Floating icon for the home button */
@@ -118,7 +138,7 @@ legend{
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: rgb(225,235,235);
+    background-color: rgb(225, 235, 235);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +152,12 @@ legend{
 }
 
 footer {
-    background-color: rgb(240,234,245);
+    background-color: rgb(240, 234, 245);
     margin-top: 20px;
+    text-align: center;
+}
+
+aside {
+    margin-top: 10px;
+    text-align: center;
 }
